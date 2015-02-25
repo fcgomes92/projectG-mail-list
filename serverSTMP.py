@@ -21,10 +21,10 @@ def enviar_email_gmail(login='',psswrd='',mail_list=[], subj='Server mail', msg=
 From: <{}>
 Subject: [{}]
 {}
-'''.format(login,
-	mail_list.__str__().replace('[','').replace(']',''),
+'''.format(', '.join(mail_list),
+	login,
 	subj,
-	msg
+	msg,
 	).encode('utf-8')
 
 	try:
